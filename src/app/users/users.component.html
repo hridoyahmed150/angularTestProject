@@ -1,0 +1,24 @@
+<h1>Posts</h1>
+
+<ul>
+  <li *ngFor="let data of posts.data">
+  	<div class="post">
+  		<a href="details/{{data.id}}">
+  			{{data.title}}
+  		</a>
+  		<p>
+  			{{data.content}}
+  		</p>
+  	</div>
+  </li>
+</ul>
+ <ul>
+  <li>
+  	<a routerLink="details">next</a>
+  </li>
+  <li>
+  	<a routerLink="{{
+  			posts.links.prev
+  		}}">prev</a>
+  </li>
+</ul>
